@@ -1,0 +1,23 @@
+{
+  "name": "typeorm-template",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Volodymyr Dombrovskyi <vova-dombrovskyi@pluralsight.com>",
+  "license": "MIT",
+  "scripts": {
+    "migrate": "ts-node ./node_modules/.bin/typeorm migration:run --config migrations-config.ts",
+    "migrate:generate": "ts-node ./node_modules/.bin/typeorm migration:generate --config migrations-config.ts -n",
+    "migrate:undo": "ts-node ./node_modules/.bin/typeorm migration:revert --config migrations-config.ts",
+    "start": "ts-node index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "@types/pg": "^7.14.3",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "pg": "^8.2.0",
+    "typeorm": "^0.2.24"
+  }
+}
